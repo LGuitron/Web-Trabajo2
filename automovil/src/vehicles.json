@@ -1,0 +1,52 @@
+{
+    "autos": [
+      {
+        "placa": "abcdef",
+        "marca": "vw",
+        "submarca": "gol",
+        "kilometraje": "60000",
+        "fecha_ultimo_servicio": "2018-10-03",
+        "km_ultimo_servicio": "10000"
+      },
+      {
+        "placa": "qwerty",
+        "marca": "nissan",
+        "submarca": "gtr",
+        "kilometraje": "600",
+        "fecha_ultimo_servicio": "2018-10-03",
+        "km_ultimo_servicio": "100"
+      },
+      {
+        "placa": "abcdef",
+        "marca": "vw",
+        "submarca": "gol",
+        "kilometraje": "9623",
+        "fecha_ultimo_servicio": "2018-07-03",
+        "km_ultimo_servicio": "123"
+      },
+      {
+        "placa": "zxcvb",
+        "marca": "audi",
+        "submarca": "a4",
+        "kilometraje": "6000",
+        "fecha_ultimo_servicio": "2018-05-01",
+        "km_ultimo_servicio": "1000"
+      },
+      {
+        "placa": "lkjh",
+        "marca": "porsche",
+        "submarca": "911",
+        "kilometraje": "6000",
+        "fecha_ultimo_servicio": "2018-04-05",
+        "km_ultimo_servicio": "1000"
+      },
+      {
+        "placa": "zxcvb",
+        "marca": "audi",
+        "submarca": "a4",
+        "kilometraje": "10000",
+        "fecha_ultimo_servicio": "2018-05-01",
+        "km_ultimo_servicio": "10"
+      }
+    ]
+  }
