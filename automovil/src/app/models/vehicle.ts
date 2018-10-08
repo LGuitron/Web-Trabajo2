@@ -3,18 +3,17 @@ export class Vehicle {
     marca: string;
     submarca: string;
     kilometraje:number;
-    fecha_ultimo_servicio:string;
+    fecha_ultimo_servicio:Date;
     km_ultimo_servicio:number;
   
-  
-    constructor( name: string, gender: string, url: string) {
-  
-      this.name = name;
-      this.gender = gender;
-      this.url = url;
+    constructor(placa: string, marca : string, submarca: string, kilometraje 
+      ,fecha_ultimo_servicio: Date, km_ultimo_servicio: number){
+        this.placas = placa; 
+        this.marca = marca; 
+        this.submarca = submarca; 
+        this.kilometraje = kilometraje; 
+        this.fecha_ultimo_servicio = fecha_ultimo_servicio; 
+        this.km_ultimo_servicio = km_ultimo_servicio; 
     }
-  
-    getId(): string{
-      return this.url.replace('https://swapi.co/api/people/', '').replace('/', '');
-    }
+
   }
