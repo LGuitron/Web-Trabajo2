@@ -1,23 +1,24 @@
 <h1>Lista de automóviles</h1>
 
-<!-- Dentro del proyecto anterior de angular (mantenimiento de vehiculos), 
-  implementa boostrap con la base en sass. Implementa un listado (tabla de boostrap) 
-  de vehiculos donde se pueda ver la información básica de cada uno de ellos 
+<!-- Dentro del proyecto anterior de angular (mantenimiento de vehiculos),
+  implementa boostrap con la base en sass. Implementa un listado (tabla de boostrap)
+  de vehiculos donde se pueda ver la información básica de cada uno de ellos
   (placas, marca, submarca y kilometraje)
 
-Todos los automóviles se hace servicio cada 10 kilometros o cada 6 meses. 
-Identifica con un color amarillo los vehículos que están a 1000km o a 1 mes 
+Todos los automóviles se hace servicio cada 10 kilometros o cada 6 meses.
+Identifica con un color amarillo los vehículos que están a 1000km o a 1 mes
 de tener que programar su servicio. Identifica con un color naranja en la tabla
  los vehiculos que están a una semana de programar su servicio o a 100 km y
   los que ya vencieron con un color rojo.
 
-Poe medio de un botón de un popover de bootstrap que se muestre la información 
+Poe medio de un botón de un popover de bootstrap que se muestre la información
 de la fecha de vencimiento y kilometraje de cada vehículo.
 
 -->
 <table class="table">
   <thead class="thead-light">
   <tr>
+    <th scope="col">#</th>
     <th scope="col">Placa</th>
     <th scope="col">Marca</th>
     <th scope="col">Submarca</th>
@@ -26,10 +27,13 @@ de la fecha de vencimiento y kilometraje de cada vehículo.
   </thead>
   <tbody>
 
-  <tr>
-    <td>{{vehicle.placas}</td>
+                                                                            <!-- Sustituir aqui las condiciones para escoger color de la fila-->
+  <tr *ngFor="let vehicle of vehicles; let i = index" [attr.data-index]="i" [ngStyle]="i%4==1 ? yellowStyle : i%4==2 ? orangeStyle : i%4==3 ? redStyle : whiteStyle">
+    <td>{{i}}</td>
+    <td>{{vehicle.placa}}</td>
     <td>{{vehicle.marca}}</td>
-    <td>{{client.submarca}}</td>
-    <td>{{client.kilometraje}}</td>
-
+    <td>{{vehicle.submarca}}</td>
+    <td>{{vehicle.kilometraje}}</td>
   </tr>
+
+</table>
