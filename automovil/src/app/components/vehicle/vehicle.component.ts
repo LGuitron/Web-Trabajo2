@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Vehicle} from '../../models/vehicle';
-import  data from 'ves'; 
 
-declare var require : any; 
+import data from '../../../assets/vehicles.json';
+
+declare var require : any;
 
 @Component({
   selector: 'app-vehicle',
@@ -10,16 +11,39 @@ declare var require : any;
   styleUrls: ['./vehicle.component.scss']
 })
 export class VehicleComponent implements OnInit {
-  
-  vehicle = new Array<Vehicle>(); 
-  json = require('~/src/vehicles.json');
-  constructor() { 
-    this.vehicle  = new Array<Vehicle>();
-    this.vehicle = this.json; 
-    //console.log("holi");
-    //console.log(this.vehicle); 
-    //console.log("holi2");
 
+  vehicles = new Array<Vehicle>();
+
+    whiteStyle =  {
+    "color" : "black",
+    "background-color" : "white",
+    "font-size" : "15px",
+    "padding" : "20px"
+  };
+
+  yellowStyle =  {
+    "color" : "black",
+    "background-color" : "yellow",
+    "fompont-size" : "10px",
+    "padding" : "20px"
+  };
+
+    orangeStyle =  {
+    "color" : "black",
+    "background-color" : "orange",
+    "fompont-size" : "10px",
+    "padding" : "20px"
+  };
+    redStyle =  {
+    "color" : "black",
+    "background-color" : "red",
+    "fompont-size" : "10px",
+    "padding" : "20px"
+  };
+
+  constructor() {
+    this.vehicles  = new Array<Vehicle>();
+    this.vehicles = data.autos;
   }
 
   ngOnInit() {
