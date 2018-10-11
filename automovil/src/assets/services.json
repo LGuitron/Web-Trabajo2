@@ -1,0 +1,14 @@
+{
+  "services":[
+    {
+      "placa": "abcdef",
+      "costo": "100",
+      "fecha": "2018-10-03"
+    },
+    {
+      "placa": "qwerty",
+      "costo": "150",
+      "fecha": "2018-10-03"
+    }
+  ]
+}
