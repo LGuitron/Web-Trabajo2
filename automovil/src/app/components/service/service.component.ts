@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Vehicle} from '../../models/vehicle';
+import data from '../../../assets/vehicles.json';
 
 @Component({
   selector: 'app-service',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServiceComponent implements OnInit {
 
+  vehicle: Vehicle;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  getVehicle(placa: string) {
+    this.vehicle = data.autos;
   }
 
 }

@@ -29,7 +29,7 @@ de la fecha de vencimiento y kilometraje de cada vehículo.
 
                                                                             <!-- Sustituir aqui las condiciones para escoger color de la fila-->
   <tr *ngFor="let vehicle of vehicles; let i = index" [attr.data-index]="i" [ngStyle]="i%4==1 ? yellowStyle : i%4==2 ? orangeStyle : i%4==3 ? redStyle : whiteStyle">
-    <td>{{i}}</td>
+    <th scope="row"> <a [routerLink]="['/vehicles/', i, 'service']">{{i}}</a></th>
     <td>{{vehicle.placa}}</td>
     <td>{{vehicle.marca}}</td>
     <td>{{vehicle.submarca}}</td>
