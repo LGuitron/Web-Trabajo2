@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Vehicle} from '../../models/vehicle';
-import  data from './vehicles.json'; 
+import  data from 'ves'; 
 
 declare var require : any; 
 
