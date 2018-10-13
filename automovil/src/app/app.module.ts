@@ -6,6 +6,7 @@ import { ClientComponent } from './components/client/client.component';
 import { VehicleComponent } from './components/vehicle/vehicle.component';
 import { ServiceComponent } from './components/service/service.component';
 import { RoutingModule } from './routing.module';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,12 @@ import { RoutingModule } from './routing.module';
   ],
   imports: [
     BrowserModule,
-    RoutingModule
+    RoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

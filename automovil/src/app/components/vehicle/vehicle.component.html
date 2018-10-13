@@ -5,13 +5,12 @@
   de vehiculos donde se pueda ver la información básica de cada uno de ellos
   (placas, marca, submarca y kilometraje)
 
-Todos los automóviles se hace servicio cada 10 kilometros o cada 6 meses.
+Todos los automóviles se hace servicio cada 10000 kilometros o cada 6 meses.
 Identifica con un color amarillo los vehículos que están a 1000km o a 1 mes
 de tener que programar su servicio. Identifica con un color naranja en la tabla
  los vehiculos que están a una semana de programar su servicio o a 100 km y
   los que ya vencieron con un color rojo.
-
-Poe medio de un botón de un popover de bootstrap que se muestre la información
+Por medio de un botón de un popover de bootstrap que se muestre la información
 de la fecha de vencimiento y kilometraje de cada vehículo.
 
 -->
@@ -22,18 +21,27 @@ de la fecha de vencimiento y kilometraje de cada vehículo.
     <th scope="col">Placa</th>
     <th scope="col">Marca</th>
     <th scope="col">Submarca</th>
-    <th scope="col">Kilometraje</th>
+    <th scope="col">Kilometraje actual</th>
+    <th scope="col">Info</th>
   </tr>
   </thead>
   <tbody>
 
-                                                                            <!-- Sustituir aqui las condiciones para escoger color de la fila-->
-  <tr *ngFor="let vehicle of vehicles; let i = index" [attr.data-index]="i" [ngStyle]="i%4==1 ? yellowStyle : i%4==2 ? orangeStyle : i%4==3 ? redStyle : whiteStyle">
+   <!-- Sustituir aqui las condiciones para escoger color de la fila-->
+  <tr *ngFor="let vehicle of vehicles; let i = index" [attr.data-index]="i" [ngStyle]="color(i)">
     <th scope="row"> <a [routerLink]="['/vehicles/', i, 'service']">{{i}}</a></th>
     <td>{{vehicle.placa}}</td>
     <td>{{vehicle.marca}}</td>
     <td>{{vehicle.submarca}}</td>
-    <td>{{vehicle.kilometraje}}</td>
+    <td>{{vehicle.kilometraje}} km </td>
+    <td>
+      <button type="button" class="btn btn-outline-secondary" 
+      ngbPopover="{{vehicle.fecha_ultimo_servicio}} | {{vehicle.km_ultimo_servicio}} km" 
+      triggers="mouseenter:mouseleave" popoverTitle="Último servicio ">
+      + 
+    </button></td>
+    
   </tr>
 
 </table>
+

@@ -49,4 +49,29 @@ export class VehicleComponent implements OnInit {
   ngOnInit() {
   }
 
+  color(index: number ){
+    var difkm = this.vehicles[index].kilometraje - this.vehicles[index].km_ultimo_servicio ; 
+    var curDate = new Date(); 
+    var lastDate = new Date(this.vehicles[index].fecha_ultimo_servicio);
+    var diffecha =  curDate.valueOf() -  lastDate.valueOf(); 
+    console.log(diffecha);
+    
+    if(difkm >= 10000 ){
+      return this.redStyle; 
+    }else if(difkm >= 9900 ){
+      return this.orangeStyle;
+    }else if(difkm >= 9000 ){
+      return this.yellowStyle; 
+    }
+    return this.whiteStyle; 
+  }
+
+  /*Todos los automóviles se hace servicio cada 100000 kilometros o cada 6 meses.
+   Identifica con un color amarillo los vehículos que están a 1000km o a 1 mes de tener que programar su servicio.
+  Identifica con un color naranja en la tabla los vehiculos que están a una semana de programar su servicio o a 
+  100 km y los que ya vencieron con un color rojo.*/
+
+
+  
+
 }
