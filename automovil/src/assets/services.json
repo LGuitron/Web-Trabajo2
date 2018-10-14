@@ -5,15 +5,15 @@
       "placa": "abcdef",
       "costo": "100",
       "fecha": "2018-10-03",
-      "encargado": "Juan Perez",
-      "notas": "Todo salio bien"
+      "encargado": "Juan Pérez",
+      "notas": "Todo salió bien"
     },
     {
       "id": 1,
       "placa": "abcdef",
       "costo": "150",
       "fecha": "2017-10-03",
-      "encargado": "Juan Perez",
+      "encargado": "Juan Pérez",
       "notas": "Todo salio bien"
     },
     {
@@ -21,64 +21,64 @@
       "placa": "qwerty",
       "costo": "150",
       "fecha": "2018-10-03",
-      "encargado": "Juan Perez",
-      "notas": "Todo salio bien"
+      "encargado": "Juan Pérez",
+      "notas": "Todo salió bien"
     },
     {
       "id": 3,
       "placa": "qwerty",
       "costo": "180",
       "fecha": "2017-10-03",
-      "encargado": "Juan Perez",
-      "notas": "Todo salio bien"
+      "encargado": "Juan Pérez",
+      "notas": "Todo salió bien"
     },
     {
       "id": 4,
       "placa": "abcdefg",
       "costo": "200",
       "fecha": "2018-10-03",
-      "encargado": "Juan Perez",
-      "notas": "Todo salio bien"
+      "encargado": "Juan Pérez",
+      "notas": "Todo salió bien"
     },
     {
       "id": 5,
       "placa": "abcdefg",
       "costo": "300",
       "fecha": "2017-10-03",
-      "encargado": "Juan Perez",
-      "notas": "Todo salio bien"
+      "encargado": "Juan Pérez",
+      "notas": "Todo salió bien"
     },
     {
       "id": 6,
       "placa": "zxcvb",
       "costo": "250",
       "fecha": "2018-10-03",
-      "encargado": "Juan Perez",
-      "notas": "Todo salio bien"
+      "encargado": "Juan Pérez",
+      "notas": "Todo salió bien"
     },
     {
       "id": 7,
       "placa": "zxcvb",
       "costo": "350",
       "fecha": "2017-10-03",
-      "encargado": "Juan Perez",
-      "notas": "Todo salio bien"
+      "encargado": "Juan Pérez",
+      "notas": "Todo salió bien"
     },
     {
       "id": 8,
       "placa": "lkjh",
       "costo": "300",
       "fecha": "2018-10-03",
-      "encargado": "Juan Perez",
-      "notas": "Todo salio bien"
+      "encargado": "Juan Pérez",
+      "notas": "Todo salió bien"
     },
     {
       "id": 9,
       "placa": "lkjh",
       "costo": "350",
       "fecha": "2017-10-03",
-      "encargado": "Juan Perez",
-      "notas": "Todo salio bien"
+      "encargado": "Juan Pérez",
+      "notas": "Todo salió bien"
     }
   ]
 }
