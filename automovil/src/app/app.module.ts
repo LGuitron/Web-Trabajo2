@@ -7,13 +7,15 @@ import { VehicleComponent } from './components/vehicle/vehicle.component';
 import { ServiceComponent } from './components/service/service.component';
 import { RoutingModule } from './routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ServiceDetailComponent } from './components/service-detail/service-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientComponent,
     VehicleComponent,
-    ServiceComponent
+    ServiceComponent,
+    ServiceDetailComponent
   ],
   imports: [
     BrowserModule,

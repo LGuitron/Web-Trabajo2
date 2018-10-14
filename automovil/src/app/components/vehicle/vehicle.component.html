@@ -29,18 +29,18 @@ de la fecha de vencimiento y kilometraje de cada vehículo.
 
    <!-- Sustituir aqui las condiciones para escoger color de la fila-->
   <tr *ngFor="let vehicle of vehicles; let i = index" [attr.data-index]="i" [ngStyle]="color(i)">
-    <th scope="row"> <a [routerLink]="['/vehicles/', i, 'service']">{{i}}</a></th>
+    <th scope="row"> <a [routerLink]="['/vehicles/', vehicle.placa, 'service']">{{i}}</a></th>
     <td>{{vehicle.placa}}</td>
     <td>{{vehicle.marca}}</td>
     <td>{{vehicle.submarca}}</td>
     <td>{{vehicle.kilometraje}} km </td>
     <td>
-      <button type="button" class="btn btn-outline-secondary" 
-      ngbPopover="{{vehicle.fecha_ultimo_servicio}} | {{vehicle.km_ultimo_servicio}} km" 
+      <button type="button" class="btn btn-outline-secondary"
+      ngbPopover="{{vehicle.fecha_ultimo_servicio}} | {{vehicle.km_ultimo_servicio}} km"
       triggers="mouseenter:mouseleave" popoverTitle="Último servicio ">
-      + 
+      +
     </button></td>
-    
+
   </tr>
 
 </table>

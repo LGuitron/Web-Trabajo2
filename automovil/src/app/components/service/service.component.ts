@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
 import {Service} from '../../models/service';
 import data from '../../../assets/services.json';
 
@@ -18,15 +19,19 @@ export class ServiceComponent implements OnInit {
     "padding" : "20px"
   };
 
-  constructor() {
-    this.services  = new Array<Service>();
-    this.services = data.services;
-  }
+  constructor(private route: ActivatedRoute) {}
 
-  ngOnInit() {
+  ngOnInit()
+  {
+    this.route.params.subscribe(params => {
+       this.getVehicle(params.id);
+    });
+
   }
 
   getVehicle(id: string) {
-    this.services = data.services[id];
+    this.services = data.services.filter(obj => {
+      return obj.placa === id
+    })
   }
 }
