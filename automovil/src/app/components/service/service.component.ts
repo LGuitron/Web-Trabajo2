@@ -30,8 +30,19 @@ export class ServiceComponent implements OnInit {
   }
 
   getVehicle(id: string) {
-    this.services = data.services.filter(obj => {
-      return obj.placa === id
-    })
+
+    // Get all services
+    if(id=="all")
+    {
+       this.services = data.services;
+    }
+
+    // Get services for specific vehicle
+    else
+    {
+      this.services = data.services.filter(obj => {
+        return obj.placa === id
+      })
+    }
   }
 }

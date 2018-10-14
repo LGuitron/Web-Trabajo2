@@ -8,6 +8,7 @@ import { ServiceComponent } from './components/service/service.component';
 import { RoutingModule } from './routing.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ServiceDetailComponent } from './components/service-detail/service-detail.component';
+import { MainMenuComponent } from './components/main-menu/main-menu.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ServiceDetailComponent } from './components/service-detail/service-deta
     ClientComponent,
     VehicleComponent,
     ServiceComponent,
-    ServiceDetailComponent
+    ServiceDetailComponent,
+    MainMenuComponent
   ],
   imports: [
     BrowserModule,
