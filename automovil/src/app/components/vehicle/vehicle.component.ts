@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Vehicle} from '../../models/vehicle';
 import data from '../../../assets/vehicles.json';
+import { last } from '@angular/router/src/utils/collection';
 
 declare var require : any;
 
@@ -52,14 +53,19 @@ export class VehicleComponent implements OnInit {
     var difkm = this.vehicles[index].kilometraje - this.vehicles[index].km_ultimo_servicio ; 
     var curDate = new Date(); 
     var lastDate = new Date(this.vehicles[index].fecha_ultimo_servicio);
-    var diffecha =  curDate.valueOf() -  lastDate.valueOf(); 
-    console.log(diffecha);
+    var templdM = new Date(lastDate); // 1 month before next service 
+    templdM.setMonth(templdM.getMonth() + 5); 
+    lastDate.setMonth(lastDate.getMonth()+6); // next service 
+    var templd7 = new Date( lastDate);
+    templd7.setDate(lastDate.getDate() - 7); 
     
-    if(difkm >= 10000 ){
+
+    
+    if(difkm >= 10000 || curDate >= lastDate){
       return this.redStyle; 
-    }else if(difkm >= 9900 ){
+    }else if(difkm >= 9900 || curDate >= templd7 ){
       return this.orangeStyle;
-    }else if(difkm >= 9000 ){
+    }else if(difkm >= 9000 || curDate >= templdM){
       return this.yellowStyle; 
     }
     return this.whiteStyle; 
