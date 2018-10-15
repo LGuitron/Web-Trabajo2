@@ -1,3 +1,20 @@
-<p>
-  client works!
-</p>
+<h1 class="text-center">Lista de clientes</h1>
+
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre cliente</th>
+      <th scope="col">Placa de su auto</th>
+      <th scope="col">Marca</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes; let i = index" [attr.data-index]="i" [ngStyle]="whiteStyle">
+      <th scope="row">{{i}}</th>
+      <td>{{cliente.nombre}}</td>
+      <td>{{cliente.placa}}</td>
+      <td>{{cliente.marca}}</td>
+    </tr>
+  </tbody>
+</table>

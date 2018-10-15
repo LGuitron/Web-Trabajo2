@@ -1,0 +1,46 @@
+{
+    "clientes": [
+      {
+        "id": 0,
+        "nombre":"Brandon",
+        "placa": "abcdef",
+        "marca": "vw"
+        
+      },
+      {
+        "id": 1,
+        "nombre":"Eli",
+        "placa": "qwerty",
+        "marca": "nissan"
+      
+      },
+      {
+        "id": 2,
+        "nombre":"Luis",
+        "placa": "abcdefg",
+        "marca": "vw"
+  
+      },
+      {
+        "id": 3,
+        "nombre":"Karla",
+        "placa": "zxcvb",
+        "marca": "audi"
+
+      },
+      {
+        "id": 4,
+        "nombre":"Paty",
+        "placa": "lkjh",
+        "marca": "porsche"
+
+      },
+      {
+        "id": 5,
+        "nombre":"Lucas",
+        "placa": "zxcvb",
+        "marca": "audi"
+
+      }
+    ]
+  }
